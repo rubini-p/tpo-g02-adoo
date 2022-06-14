@@ -3,7 +3,7 @@ package UnidadFuncional;
 /**
  * 
  */
-public enum TipoDeUnidadaFuncional {
+public enum TipoDeUnidadFuncional {
     COCHERA,
     DEPARTAMENTO
 }
