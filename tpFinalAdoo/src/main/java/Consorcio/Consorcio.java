@@ -1,36 +1,30 @@
 package Consorcio;
 
+import Expensa.Expensa;
+import Gastos.Gasto;
+import UnidadFuncional.UnidadFuncional;
+
+import java.util.List;
+
 /**
  * 
  */
 public class Consorcio {
 
-    /**
-     * Default constructor
-     */
-    public Consorcio() {
+
+    public Consorcio(List<UnidadFuncional> unidadesFuncionales, CuentaCorriente cuentaBancaria, List<Expensa> expensas) {
+        this.unidadesFuncionales = unidadesFuncionales;
+        this.cuentaBancaria = cuentaBancaria;
+        this.expensas = expensas;
     }
 
-    /**
-     * 
-     */
-    public lista<unidades> unidadesFuncionales;
+    public List<UnidadFuncional> unidadesFuncionales;
 
-    /**
-     * 
-     */
-    public CuentaBancaria cuentaBancaria;
+    public CuentaCorriente cuentaBancaria;
 
-    /**
-     * 
-     */
-    public lista<expensas> expensas;
+    public List<Expensa> expensas;
 
-    /**
-     * @param unidades 
-     * @param gastos
-     */
-    public void obtenerExpensas(void unidades, void gastos) {
+    public void obtenerExpensas(UnidadFuncional unidades, Gasto gastos) {
         // TODO implement here
     }
 

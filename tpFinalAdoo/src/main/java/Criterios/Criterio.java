@@ -3,11 +3,10 @@ package Criterios;
 /**
  * 
  */
-public abstract class criterio {
+public abstract class Criterio {
 
 
-    public criterio() {
-    }
+
 
     public void obtencionDeSaldo() {
         // TODO implement here
