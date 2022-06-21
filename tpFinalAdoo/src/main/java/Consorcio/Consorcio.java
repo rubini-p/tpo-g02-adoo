@@ -1,7 +1,6 @@
 package Consorcio;
 
 import Expensa.Expensa;
-import Gastos.Gasto;
 import UnidadFuncional.UnidadFuncional;
 
 import java.util.List;
@@ -24,5 +23,27 @@ public class Consorcio {
 
     public List<Expensa> expensas;
 
+    public List<UnidadFuncional> getUnidadesFuncionales() {
+        return unidadesFuncionales;
+    }
 
+    public CuentaCorriente getCuentaBancaria() {
+        return cuentaBancaria;
+    }
+
+    public void setCuentaBancaria(CuentaCorriente cuentaBancaria) {
+        this.cuentaBancaria = cuentaBancaria;
+    }
+
+    public List<Expensa> getExpensas() {
+        return expensas;
+    }
+
+    public void agregarExpensa(Expensa expensa) {
+        this.expensas.add(expensa);
+    }
+
+    public void agregarUnidadFuncional(UnidadFuncional uf) {
+        this.unidadesFuncionales.add(uf);
+    }
 }
