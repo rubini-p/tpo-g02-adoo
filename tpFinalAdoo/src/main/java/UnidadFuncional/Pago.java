@@ -1,5 +1,7 @@
 package UnidadFuncional;
 
+import Expensa.Expensa;
+
 import java.util.Date;
 
 /**
@@ -17,7 +19,8 @@ public class Pago {
     public Float monto;
     public float totalAPagar;
 
-    public void Pagar() {
+    public void Pagar(Expensa expensa, UnidadFuncional unidadFuncional) {
+
 
     }
 

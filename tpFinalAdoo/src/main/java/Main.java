@@ -43,31 +43,20 @@ public class Main {
         Criterio criterio2 = new PagoCompletoGenerarFFR();
 
         Expensa expensa = new Expensa(date, gastos,critero, TipoDeExpensas.ORDINARIAS,admin);
+        Expensa expensa2 = new Expensa(date, gastos,critero, TipoDeExpensas.EXTRAORDINARIAS,admin);
         expensa.criterio.divisionDePagos();
         expensa.setCriterio(criterio2);
         expensa.criterio.divisionDePagos();
 
-        System.out.print(expensa.obtenerMonto());
+        System.out.println(expensa.obtenerMonto());
         ControladorExpensas controlador = new ControladorExpensas();
+        List<Expensa> expensasLista= new ArrayList();
+        expensasLista.add(expensa2);
+        expensasLista.add(expensa);
 
         controlador.agregarGasto(expensa, gasto1);
-        controlador.obtenerTotal(expensa);
+        controlador.obtenerTotal(expensasLista);
+        System.out.println(controlador.obtenerTotal(expensasLista));
 
-
-        Notificador notificador = new Notificador();
-        EstrategiaDeNotificacion notificadorSMS = new NotificacionPorSMS(new AdapterSMSTwilio());
-        EstrategiaDeNotificacion notificadorWhatsApp = new NotificacionPorWhatsApp(new AdapterWhatsAppTwilio());
-        EstrategiaDeNotificacion notificadorEmail = new NotificacionPorEmail(new AdapterEmailJavaEmail());
-
-        Notificacion notificacion = new Notificacion();
-        notificacion.setEmailDestinatario("martin@gmail.com");
-        notificacion.setEmailRemitente("tomas@gmail.com");
-        notificacion.setMensaje("Hola");
-        notificacion.setNroDestinatario("1234");
-        notificacion.setNroRemitente("9876");
-
-        notificador.setEstrategia(notificadorEmail);
-
-        notificador.enviar(notificacion);
     }
 }

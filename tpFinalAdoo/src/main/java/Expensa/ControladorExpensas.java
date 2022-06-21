@@ -3,6 +3,8 @@ package Expensa;
 import Criterios.Criterio;
 import Gastos.Gasto;
 
+import java.util.List;
+
 public class ControladorExpensas {
 
     public void cambiarCriterio(Expensa expensa, Criterio nuevoCriterio){
@@ -13,8 +15,13 @@ public class ControladorExpensas {
         expensa.agregarGasto(nuevoGasto);
     }
 
-    public void obtenerTotal(Expensa expensa){
-        System.out.print(expensa.obtenerMonto());
+    public float obtenerTotal(List<Expensa> expensas){
+        float sum=0;
+        for (final Expensa expensa : expensas) {
+            sum = sum + expensa.obtenerMonto();
+        }
+        return sum;
     }
-
 }
+
+

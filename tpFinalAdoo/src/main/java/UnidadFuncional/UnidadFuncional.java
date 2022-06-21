@@ -33,18 +33,19 @@ public class UnidadFuncional   {
 
     public TipoDeUnidadFuncional tipoDeUnidadFuncional;
 
-    public int obtenerPorcentaje() {
-        // TODO implement here
-        return 0;
+    public int obtenerPorcentaje(int TamañoTotal) {
+        return (getTamaño()*100)/TamañoTotal;
     }
 
-    public float calcularGastosUnidad(UnidadFuncional unidad, Expensa expensas) {
-        // TODO implement here
-        return 0.0f;
+    public float calcularGastosUnidad(float totalAPagar, int TamañoTotal) {
+        int porcentaje = obtenerPorcentaje(TamañoTotal);
+        float montoAPagar = (porcentaje*totalAPagar)/100;
+        return montoAPagar=montoAPagar +deuda;
     }
 
 
     public void confirmarPago( int deuda , int Pago) {
+        setDeuda(getDeuda()-Pago);
 
     }
 
