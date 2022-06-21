@@ -9,19 +9,31 @@ import java.util.Date;
  */
 public class Pago {
 
-    public Pago(Date fechaDePago, Float monto, float totalAPagar) {
+    public Pago(Date fechaDePago, Float monto) {
         this.fechaDePago = fechaDePago;
         this.monto = monto;
-        this.totalAPagar = totalAPagar;
     }
 
     public Date fechaDePago;
     public Float monto;
-    public float totalAPagar;
 
-    public void Pagar(Expensa expensa, UnidadFuncional unidadFuncional) {
-
-
+    public Date getFechaDePago() {
+        return fechaDePago;
     }
+
+    public void setFechaDePago(Date fechaDePago) {
+        this.fechaDePago = fechaDePago;
+    }
+
+    public Float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(Float monto) {
+        this.monto = monto;
+    }
+
+
+
 
 }

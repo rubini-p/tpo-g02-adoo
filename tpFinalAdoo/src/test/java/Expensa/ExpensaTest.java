@@ -23,6 +23,8 @@ class ExpensaTest {
         Expensa expensa = new Expensa(new Date(), new ArrayList<Gasto>(),new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
         try{
             expensa.setCriterio(new PagoCompletoGenerarFFR());
+            System.out.print(expensa.getCriterio());
+
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -43,6 +45,8 @@ class ExpensaTest {
         Expensa expensa = new Expensa(new Date(), gastos,new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
         try{
             expensa.obtenerMonto();
+            System.out.print(expensa.obtenerMonto());
+
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -44,8 +44,8 @@ public class UnidadFuncional   {
     }
 
 
-    public void confirmarPago( int deuda , int Pago) {
-        setDeuda(getDeuda()-Pago);
+    public void confirmarPago( Pago pago) {
+        setDeuda(getDeuda()-pago.monto);
 
     }
 
