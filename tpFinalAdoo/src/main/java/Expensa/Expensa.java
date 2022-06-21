@@ -66,6 +66,10 @@ public  class Expensa {
         return sum;
     }
 
+    public void agregarGasto(Gasto gasto){
+        gastos.add(gasto);
+    }
+
 
 
 

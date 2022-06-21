@@ -6,6 +6,7 @@ import Expensa.Expensa;
 import Expensa.TipoDeExpensas;
 import Expensa.LoginAdapter;
 import Expensa.Administrador;
+import  Expensa.ControladorExpensas;
 import Gastos.Gasto;
 import Gastos.Normales;
 import Gastos.Recurrentes;
@@ -39,6 +40,10 @@ public class Main {
         expensa.criterio.divisionDePagos();
 
         System.out.print(expensa.obtenerMonto());
+        ControladorExpensas controlador = new ControladorExpensas();
+
+        controlador.agregarGasto(expensa, gasto1);
+        controlador.obtenerTotal(expensa);
 
 
 
