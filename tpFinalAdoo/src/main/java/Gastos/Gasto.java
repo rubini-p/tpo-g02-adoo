@@ -10,14 +10,16 @@ public abstract class Gasto  {
         this.fecha = fecha;
     }
 
-    public Gasto() {
-    }
-
     private Float monto;
 
     public boolean recurrente;
 
     private Date fecha;
+
+
+    public Float getMonto() {
+        return monto;
+    }
 
     public void setMonto(Float monto) {
         this.monto = monto;
@@ -38,9 +40,4 @@ public abstract class Gasto  {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-
-    public float getMonto() {
-        return getMonto();
-    }
-
 }

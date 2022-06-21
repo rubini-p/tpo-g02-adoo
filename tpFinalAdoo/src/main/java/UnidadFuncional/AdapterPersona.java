@@ -1,28 +1,13 @@
 package UnidadFuncional;
 
+import Externos.Persona;
+
 /**
  * 
  */
 public interface AdapterPersona {
 
-    /**
-     * 
-     */
-    public int id;
 
-    /**
-     * 
-     */
-    public String nombre;
-
-    /**
-     * 
-     */
-    public String apellido;
-
-    /**
-     * @return
-     */
     public Persona obtenerPersona();
 
 }

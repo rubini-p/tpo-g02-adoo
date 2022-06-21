@@ -24,8 +24,5 @@ public class Consorcio {
 
     public List<Expensa> expensas;
 
-    public void obtenerExpensas(UnidadFuncional unidades, Gasto gastos) {
-        // TODO implement here
-    }
 
 }
