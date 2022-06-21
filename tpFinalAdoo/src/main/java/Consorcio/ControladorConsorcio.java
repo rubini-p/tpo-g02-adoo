@@ -22,5 +22,4 @@ public class ControladorConsorcio {
     public void agregarCuentaBancaria(CuentaCorriente CuentaBancaria) {
 
     }
-
 }
