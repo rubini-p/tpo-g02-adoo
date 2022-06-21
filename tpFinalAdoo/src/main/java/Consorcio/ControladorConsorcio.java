@@ -22,20 +22,21 @@ public class ControladorConsorcio {
 
     }
 
-    public void expensasPorUnidad(List<UnidadFuncional> undadesFuncionales, List<Expensa> expensas){
+    public void expensasPorUnidad(Consorcio consorcio){
         int TamañoTotal= 0;
         float montoToal=0;
-        for (final Expensa expensa : expensas) {
+
+        for (final Expensa expensa : consorcio.expensas) {
             montoToal = montoToal + expensa.obtenerMonto();
         }
-        for (final UnidadFuncional unidades : undadesFuncionales) {
+        for (final UnidadFuncional unidades : consorcio.unidadesFuncionales) {
             TamañoTotal = TamañoTotal + unidades.getTamaño();
         }
 
         float montoPUnidad= 0;
 
-        for (final UnidadFuncional unidad : undadesFuncionales) {
-            System.out.println(unidad.calcularGastosUnidad(montoToal,TamañoTotal)+"de :"+ montoToal);
+        for (final UnidadFuncional unidad : consorcio.unidadesFuncionales) {
+            System.out.println(consorcio.calcularGastosUnidad(montoToal,TamañoTotal,unidad)+"de :"+ montoToal);
 
         }
     }

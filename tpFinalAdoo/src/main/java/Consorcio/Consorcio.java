@@ -46,4 +46,10 @@ public class Consorcio {
     public void agregarUnidadFuncional(UnidadFuncional uf) {
         this.unidadesFuncionales.add(uf);
     }
+
+    public float calcularGastosUnidad(float totalAPagar, int TamañoTotal,UnidadFuncional unidadFuncional) {
+        int porcentaje = unidadFuncional.obtenerPorcentaje(TamañoTotal);
+        float montoAPagar = (porcentaje*totalAPagar)/100;
+        return montoAPagar=montoAPagar +unidadFuncional.getDeuda();
+    }
 }

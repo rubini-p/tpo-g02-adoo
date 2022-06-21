@@ -37,12 +37,6 @@ public class UnidadFuncional   {
         return (getTamaño()*100)/TamañoTotal;
     }
 
-    public float calcularGastosUnidad(float totalAPagar, int TamañoTotal) {
-        int porcentaje = obtenerPorcentaje(TamañoTotal);
-        float montoAPagar = (porcentaje*totalAPagar)/100;
-        return montoAPagar=montoAPagar +deuda;
-    }
-
 
     public void confirmarPago( Pago pago) {
         setDeuda(getDeuda()-pago.monto);

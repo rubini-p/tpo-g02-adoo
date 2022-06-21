@@ -144,9 +144,11 @@ class ControladorConsorcioTest {
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
+        Consorcio consorcio = new Consorcio(listaUFs,ctaCte,listaEXPEN);
+
         ControladorConsorcio controladorC = new ControladorConsorcio();
         try {
-            controladorC.expensasPorUnidad(listaUFs, listaEXPEN);
+            controladorC.expensasPorUnidad(consorcio);
         }catch (Exception e){
             e.printStackTrace();
         }
