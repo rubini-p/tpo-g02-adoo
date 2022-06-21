@@ -1,6 +1,6 @@
 package Expensa;
 
-public enum tipoDeExpensas {
+public enum TipoDeExpensas {
     PARTICULARES,
     EXTRAORDINARIAS,
     ORDINARIAS,

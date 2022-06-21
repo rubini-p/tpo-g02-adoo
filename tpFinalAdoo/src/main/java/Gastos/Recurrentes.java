@@ -7,8 +7,8 @@ import java.util.Date;
  */
 public class Recurrentes extends Gasto {
 
-    public Recurrentes(Float monto, boolean recurrente, Date fecha, int cadaCuantosDias) {
-        super(monto, recurrente, fecha);
+    public Recurrentes(Float monto, Date fecha, int cadaCuantosDias) {
+        super(monto, fecha);
         CadaCuantosDias = cadaCuantosDias;
     }
 

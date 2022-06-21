@@ -4,9 +4,8 @@ import java.util.Date;
 
 public abstract class Gasto  {
 
-    public Gasto(Float monto, boolean recurrente, Date fecha) {
+    public Gasto(Float monto, Date fecha) {
         this.monto = monto;
-        this.recurrente = recurrente;
         this.fecha = fecha;
     }
 
@@ -25,13 +24,6 @@ public abstract class Gasto  {
         this.monto = monto;
     }
 
-    public boolean isRecurrente() {
-        return recurrente;
-    }
-
-    public void setRecurrente(boolean recurrente) {
-        this.recurrente = recurrente;
-    }
 
     public Date getFecha() {
         return fecha;
