@@ -40,7 +40,7 @@ class NotificadorTest {
     }
 
     @Test
-    void setEstrategia() {
+    void cambiarEstrategia() {
         Notificador notificador = new Notificador();
         EstrategiaDeNotificacion notificadorSMS = new NotificacionPorSMS(new AdapterSMSTwilio());
         EstrategiaDeNotificacion notificadorWhatsApp = new NotificacionPorWhatsApp(new AdapterWhatsAppTwilio());

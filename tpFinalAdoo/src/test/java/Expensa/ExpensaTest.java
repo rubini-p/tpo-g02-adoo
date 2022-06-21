@@ -16,27 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExpensaTest {
 
-    @Test
-    void setGastos() {
-        Date date = new Date();
-        Gasto gasto1 = new Recurrentes((float)1998, date,30);
-
-        List<Gasto> gastos = new ArrayList<Gasto>();
-        Administrador admin = new Administrador();
-        Criterio critero = new pagoCompleto();
-
-        Expensa expensa = new Expensa(date, gastos,critero, TipoDeExpensas.ORDINARIAS,admin);
-        try{
-            expensa.agregarGasto(gasto1);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-
-    }
 
     @Test
-    void setCriterio() {
+    void cambiarCriterio() {
 
         Expensa expensa = new Expensa(new Date(), new ArrayList<Gasto>(),new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
         try{
@@ -47,7 +29,7 @@ class ExpensaTest {
     }
 
     @Test
-    void obtenerMonto() {
+    void obtenerMontoTotal() {
 
         Gasto gasto1 = new Recurrentes((float)1998, new Date(),30);
         Gasto gasto2 = new Recurrentes((float)10, new Date(),30);
