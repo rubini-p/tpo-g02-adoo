@@ -43,7 +43,7 @@ public class MainConsorcio {
 
         Criterios.pagoCompleto criterio = new pagoCompleto();
 
-        Expensa e1 = new Expensa(fecha, listaGastos, criterio, TipoDeExpensas.ORDINARIAS, administrador);
+        Expensa e1 = new Expensa(fecha, listaGastos, TipoDeExpensas.ORDINARIAS);
 
         Consorcio c = new Consorcio(listaUFs, ctaCte, listaExpensas);
 

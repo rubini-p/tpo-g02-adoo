@@ -7,18 +7,20 @@ import java.util.List;
 
 public class ControladorExpensas {
 
-    public void cambiarCriterio(Expensa expensa, Criterio nuevoCriterio){
-        expensa.setCriterio(nuevoCriterio);
+
+    public void agregarGastos(Expensa expensa, List<Gasto> gastos){
+
+        for (final Gasto gasto : gastos) {
+            if (expensa.getFecha().getMonth()==gasto.getFecha().getMonth()|| gasto.isRecurrente()==true){
+                expensa.agregarGasto(gasto);
+            }
+        }
     }
 
-    public void agregarGasto(Expensa expensa, Gasto nuevoGasto){
-        expensa.agregarGasto(nuevoGasto);
-    }
-
-    public float obtenerTotal(List<Expensa> expensas){
+    public float obtenerTotal(Expensa expensa){
         float sum=0;
-        for (final Expensa expensa : expensas) {
-            sum = sum + expensa.obtenerMonto();
+        for (final Gasto gasto : expensa.getGastos()) {
+            sum = sum + gasto.getMonto();
         }
         return sum;
     }

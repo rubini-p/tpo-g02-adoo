@@ -2,11 +2,21 @@ package Gastos;
 
 import java.util.Date;
 
-public abstract class Gasto  {
+public  class Gasto  {
 
-    public Gasto(Float monto, Date fecha) {
+    public Gasto(Float monto, Date fecha,boolean recurrente) {
         this.monto = monto;
         this.fecha = fecha;
+        this.recurrente= recurrente;
+    }
+
+
+    public boolean isRecurrente() {
+        return recurrente;
+    }
+
+    public void setRecurrente(boolean recurrente) {
+        this.recurrente = recurrente;
     }
 
     private Float monto;

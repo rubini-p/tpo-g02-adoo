@@ -10,13 +10,11 @@ import java.util.List;
 public  class Expensa {
 
 
-    public Expensa(Date fecha, List<Gasto> gastos, Criterio criterio, TipoDeExpensas tipo, Administrador administrador) {
+    public Expensa(Date fecha, List<Gasto> gastos,  TipoDeExpensas tipo) {
         this.fecha = fecha;
         this.gastos = gastos;
         this.total = obtenerMonto();
-        this.criterio = criterio;
         this.tipo = tipo;
-        this.administrador = administrador;
     }
 
     public Date fecha;
@@ -25,11 +23,7 @@ public  class Expensa {
 
     private float total;
 
-    public Criterio criterio;
-
     public TipoDeExpensas tipo;
-
-    public Administrador administrador;
 
     public Date getFecha() {
         return fecha;
@@ -46,17 +40,6 @@ public  class Expensa {
     public void setGastos(List<Gasto> gastos) {
         this.gastos = gastos;
     }
-
-    public Criterio getCriterio() {
-        return criterio;
-    }
-
-    public void setCriterio(Criterio criterio) {
-        this.criterio = criterio;
-    }
-
-
-
 
     public float obtenerMonto() {
         float sum=0;

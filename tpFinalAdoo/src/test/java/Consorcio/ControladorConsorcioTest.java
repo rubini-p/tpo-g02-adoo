@@ -4,7 +4,7 @@ import Criterios.pagoCompleto;
 import Expensa.Expensa;
 import Externos.Persona;
 import Gastos.Gasto;
-import Gastos.Recurrentes;
+
 import UnidadFuncional.ControladorUnidadesFuncionales;
 import UnidadFuncional.UnidadFuncional;
 import UnidadFuncional.TipoDeUnidadFuncional;
@@ -44,16 +44,16 @@ class ControladorConsorcioTest {
         listaUFs.add(uf1);
         listaUFs.add(uf2);
         CuentaCorriente ctaCte = new CuentaCorriente();
-        Gasto gasto1 = new Recurrentes((float)1998, new Date(),30);
-        Gasto gasto2 = new Recurrentes((float)10, new Date(),30);
-        Gasto gasto3 = new Recurrentes((float)1000, new Date(),30);
+        Gasto gasto1 = new Gasto((float)1998, new Date(),false);
+        Gasto gasto2 = new Gasto((float)10, new Date(),false);
+        Gasto gasto3 = new Gasto((float)1000, new Date(),false);
         List<Gasto> gastos = new ArrayList<Gasto>();
 
         gastos.add(gasto1);
         gastos.add(gasto2);
         gastos.add(gasto3);
 
-        Expensa expensa = new Expensa(new Date(), gastos,new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
+        Expensa expensa = new Expensa(new Date(), gastos, TipoDeExpensas.ORDINARIAS);
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
@@ -87,16 +87,16 @@ class ControladorConsorcioTest {
         listaUFs.add(uf1);
         listaUFs.add(uf2);
         CuentaCorriente ctaCte = new CuentaCorriente();
-        Gasto gasto1 = new Recurrentes((float)1998, new Date(),30);
-        Gasto gasto2 = new Recurrentes((float)10, new Date(),30);
-        Gasto gasto3 = new Recurrentes((float)1000, new Date(),30);
+        Gasto gasto1 = new Gasto((float)1998, new Date(),false);
+        Gasto gasto2 = new Gasto((float)10, new Date(),false);
+        Gasto gasto3 = new Gasto((float)1000, new Date(),false);
         List<Gasto> gastos = new ArrayList<Gasto>();
 
         gastos.add(gasto1);
         gastos.add(gasto2);
         gastos.add(gasto3);
 
-        Expensa expensa = new Expensa(new Date(), gastos,new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
+        Expensa expensa = new Expensa(new Date(), gastos, TipoDeExpensas.ORDINARIAS);
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
@@ -131,16 +131,16 @@ class ControladorConsorcioTest {
         listaUFs.add(uf1);
         listaUFs.add(uf2);
         CuentaCorriente ctaCte = new CuentaCorriente();
-        Gasto gasto1 = new Recurrentes((float)1998, new Date(),30);
-        Gasto gasto2 = new Recurrentes((float)10, new Date(),30);
-        Gasto gasto3 = new Recurrentes((float)1000, new Date(),30);
+        Gasto gasto1 = new Gasto((float)1998, new Date(),true);
+        Gasto gasto2 = new Gasto((float)10, new Date(),false);
+        Gasto gasto3 = new Gasto((float)1000, new Date(),false);
         List<Gasto> gastos = new ArrayList<Gasto>();
 
         gastos.add(gasto1);
         gastos.add(gasto2);
         gastos.add(gasto3);
 
-        Expensa expensa = new Expensa(new Date(), gastos,new pagoCompleto(), TipoDeExpensas.ORDINARIAS,new Administrador());
+        Expensa expensa = new Expensa(new Date(), gastos, TipoDeExpensas.ORDINARIAS);
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
