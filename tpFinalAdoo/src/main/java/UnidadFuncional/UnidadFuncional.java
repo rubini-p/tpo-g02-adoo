@@ -1,7 +1,5 @@
 package UnidadFuncional;
 
-import Expensa.Expensa;
-import Externos.Persona;
 
 import java.util.List;
 
@@ -11,6 +9,12 @@ import java.util.List;
  */
 public class UnidadFuncional   {
 
+    private int id;
+    private int tamaño;
+    private List<Persona> propietario;
+    private List<Persona>  inquilino;
+    private float deuda;
+    private TipoDeUnidadFuncional tipoDeUnidadFuncional;
 
     public UnidadFuncional(int id, int tamaño, List<Persona> propietario, List<Persona> inquilino, float deuda, TipoDeUnidadFuncional tipoDeUnidadFuncional) {
         this.id = id;
@@ -21,26 +25,12 @@ public class UnidadFuncional   {
         this.tipoDeUnidadFuncional = tipoDeUnidadFuncional;
     }
 
-    public int id;
-
-    public int tamaño;
-
-    public List<Persona> propietario;
-
-    public List<Persona>  inquilino;
-
-    public float deuda;
-
-    public TipoDeUnidadFuncional tipoDeUnidadFuncional;
-
     public int obtenerPorcentaje(int TamañoTotal) {
         return (getTamaño()*100)/TamañoTotal;
     }
 
-
     public void confirmarPago( Pago pago) {
         setDeuda(getDeuda()-pago.monto);
-
     }
 
     public int getId() {

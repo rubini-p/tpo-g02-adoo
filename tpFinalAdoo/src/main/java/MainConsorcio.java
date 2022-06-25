@@ -1,12 +1,10 @@
 import Consorcio.Consorcio;
 import Consorcio.ControladorConsorcio;
-import Consorcio.CuentaCorriente;
-import Criterios.Criterio;
 import Criterios.pagoCompleto;
 import Expensa.Expensa;
 import Expensa.TipoDeExpensas;
-import Expensa.Administrador;
-import Externos.Persona;
+import Consorcio.Administrador;
+import UnidadFuncional.Persona;
 import Gastos.Gasto;
 import UnidadFuncional.ControladorUnidadesFuncionales;
 import UnidadFuncional.UnidadFuncional;
@@ -33,7 +31,6 @@ public class MainConsorcio {
         UnidadFuncional uf2 = new UnidadFuncional(2,36, listaPersonas2, null ,  (float)0.0, TipoDeUnidadFuncional.COCHERA );
 
         listaUFs.add(uf1);
-        CuentaCorriente ctaCte = new CuentaCorriente();
         List<Expensa> listaExpensas = new ArrayList<Expensa>();
 
 
@@ -45,7 +42,7 @@ public class MainConsorcio {
 
         Expensa e1 = new Expensa(fecha, listaGastos, TipoDeExpensas.ORDINARIAS);
 
-        Consorcio c = new Consorcio(listaUFs, ctaCte, listaExpensas);
+        Consorcio c = new Consorcio(listaUFs, listaExpensas);
 
         ControladorUnidadesFuncionales cuf = new ControladorUnidadesFuncionales();
 

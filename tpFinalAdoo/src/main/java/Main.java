@@ -4,7 +4,7 @@ import Criterios.PagoCompletoGenerarFFR;
 import Criterios.pagoCompleto;
 import Expensa.Expensa;
 import Expensa.TipoDeExpensas;
-import Expensa.Administrador;
+import Consorcio.Administrador;
 import Expensa.ControladorExpensas;
 import Gastos.Gasto;
 

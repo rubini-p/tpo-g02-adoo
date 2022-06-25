@@ -1,14 +1,15 @@
 package Expensa;
 
-import Criterios.Criterio;
 import Gastos.Gasto;
-
 import java.util.Date;
 import java.util.List;
 
-
 public  class Expensa {
 
+    private Date fecha;
+    private List<Gasto> gastos;
+    private float total;
+    private TipoDeExpensas tipo;
 
     public Expensa(Date fecha, List<Gasto> gastos,  TipoDeExpensas tipo) {
         this.fecha = fecha;
@@ -16,14 +17,6 @@ public  class Expensa {
         this.total = obtenerMonto();
         this.tipo = tipo;
     }
-
-    public Date fecha;
-
-    private List<Gasto> gastos;
-
-    private float total;
-
-    public TipoDeExpensas tipo;
 
     public Date getFecha() {
         return fecha;
@@ -52,9 +45,4 @@ public  class Expensa {
     public void agregarGasto(Gasto gasto){
         gastos.add(gasto);
     }
-
-
-
-
-
 }

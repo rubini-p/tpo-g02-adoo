@@ -4,12 +4,15 @@ import java.util.Date;
 
 public  class Gasto  {
 
+    private Float monto;
+    private boolean recurrente;
+    private Date fecha;
+
     public Gasto(Float monto, Date fecha,boolean recurrente) {
         this.monto = monto;
         this.fecha = fecha;
         this.recurrente= recurrente;
     }
-
 
     public boolean isRecurrente() {
         return recurrente;
@@ -19,13 +22,6 @@ public  class Gasto  {
         this.recurrente = recurrente;
     }
 
-    private Float monto;
-
-    public boolean recurrente;
-
-    private Date fecha;
-
-
     public Float getMonto() {
         return monto;
     }
@@ -33,7 +29,6 @@ public  class Gasto  {
     public void setMonto(Float monto) {
         this.monto = monto;
     }
-
 
     public Date getFecha() {
         return fecha;

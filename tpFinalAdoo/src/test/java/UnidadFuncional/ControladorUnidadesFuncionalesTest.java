@@ -1,7 +1,7 @@
 package UnidadFuncional;
 
 import Consorcio.ControladorConsorcio;
-import Externos.Persona;
+import UnidadFuncional.Persona;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
