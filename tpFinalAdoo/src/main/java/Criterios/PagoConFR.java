@@ -1,15 +1,16 @@
 package Criterios;
 
+import UnidadFuncional.UnidadFuncional;
+
 /**
  * 
  */
 public class PagoConFR extends Criterio {
 
 
-
-    public void divisionDePagos() {
-        System.out.print("pagoFFR");
-
+    @Override
+    public float divisionDeExpensas(UnidadFuncional uf, float gastosTotales, float participacion) {
+        gastosTotales =- this.getSaldo();
+        return (float) (gastosTotales * participacion) / 100 ;
     }
-
 }

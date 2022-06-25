@@ -26,7 +26,6 @@ class ControladorUnidadesFuncionalesTest {
         ControladorUnidadesFuncionales controladorConsorcio = new ControladorUnidadesFuncionales();
 
         try {
-            controladorConsorcio.realizarPago(uf1,pago);
             System.out.print(uf1.getDeuda());
         }catch (Exception e){
             e.printStackTrace();

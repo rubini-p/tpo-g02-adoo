@@ -42,7 +42,7 @@ public class MainConsorcio {
 
         Expensa e1 = new Expensa(fecha, listaGastos, TipoDeExpensas.ORDINARIAS);
 
-        Consorcio c = new Consorcio(listaUFs, listaExpensas);
+        Consorcio c = new Consorcio(listaUFs, listaExpensas, criterio);
 
         ControladorUnidadesFuncionales cuf = new ControladorUnidadesFuncionales();
 

@@ -1,5 +1,7 @@
 package Consorcio;
 
+import Criterios.*;
+import Criterios.PagoCompletoGenerarFFR;
 import Expensa.Expensa;
 import Gastos.Gasto;
 
@@ -15,6 +17,8 @@ import java.util.Date;
 import java.util.List;
 
 class ControladorConsorcioTest {
+
+    Criterio criterio = new pagoCompleto();
 
     @Test
     void agregarExpensas() {
@@ -48,7 +52,7 @@ class ControladorConsorcioTest {
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
-        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN);
+        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN, criterio);
 
         ControladorConsorcio controladorC = new ControladorConsorcio();
         try {
@@ -90,7 +94,7 @@ class ControladorConsorcioTest {
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
 
-        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN);
+        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN, criterio);
 
         ControladorConsorcio controladorC = new ControladorConsorcio();
         try {
@@ -130,14 +134,15 @@ class ControladorConsorcioTest {
         gastos.add(gasto3);
 
         Expensa expensa = new Expensa(new Date(), gastos, TipoDeExpensas.ORDINARIAS);
+        System.out.println(new Date());
         List<Expensa>listaEXPEN = new ArrayList<>();
         listaEXPEN.add(expensa);
-
-        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN);
+        Criterio criterio = new pagoCompleto();
+        Consorcio consorcio = new Consorcio(listaUFs,listaEXPEN, criterio);
 
         ControladorConsorcio controladorC = new ControladorConsorcio();
         try {
-            controladorC.expensasPorUnidad(consorcio);
+            consorcio.liquidarExpensas(uf1);
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -1,6 +1,7 @@
 package UnidadFuncional;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -15,7 +16,7 @@ public class UnidadFuncional   {
     private List<Persona>  inquilino;
     private float deuda;
     private TipoDeUnidadFuncional tipoDeUnidadFuncional;
-
+    private List<Pago> listaPagos = new ArrayList<>() ;
     public UnidadFuncional(int id, int tamaño, List<Persona> propietario, List<Persona> inquilino, float deuda, TipoDeUnidadFuncional tipoDeUnidadFuncional) {
         this.id = id;
         this.tamaño = tamaño;
@@ -25,12 +26,8 @@ public class UnidadFuncional   {
         this.tipoDeUnidadFuncional = tipoDeUnidadFuncional;
     }
 
-    public int obtenerPorcentaje(int TamañoTotal) {
-        return (getTamaño()*100)/TamañoTotal;
-    }
-
-    public void confirmarPago( Pago pago) {
-        setDeuda(getDeuda()-pago.monto);
+    public float obtenerPorcentaje(int TamañoTotal) {
+        return (getTamaño() * 100)/TamañoTotal;
     }
 
     public int getId() {
@@ -79,5 +76,9 @@ public class UnidadFuncional   {
 
     public void setTipoDeUnidadFuncional(TipoDeUnidadFuncional tipoDeUnidadFuncional) {
         this.tipoDeUnidadFuncional = tipoDeUnidadFuncional;
+    }
+
+    public void agregarFactura (Pago p) {
+        this.listaPagos.add(p);
     }
 }
