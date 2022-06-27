@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * 
- */
 public class Consorcio {
 
     private List<UnidadFuncional> unidadesFuncionales;
@@ -85,7 +82,6 @@ public class Consorcio {
 
     public void liquidarExpensas(UnidadFuncional uf) {
         float participacion = uf.obtenerPorcentaje(tamanoTotal) ;
-        int mesCorriente = LocalDate.now().getMonthValue();
         float gastosTotales = 0f;
         for ( Expensa e: expensas) {
             int mesExpensa = e.getFecha().getMonth() ;
